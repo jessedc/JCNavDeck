@@ -16,6 +16,9 @@
 		88E0D9111802ABCE0081D025 /* JCNavDeck.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88E0D9101802ABCE0081D025 /* JCNavDeck.storyboard */; };
 		88E0D9151802AC210081D025 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 88E0D9131802AC210081D025 /* LICENSE */; };
 		88E0D9161802AC210081D025 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 88E0D9141802AC210081D025 /* README.md */; };
+		88E0D9191802AD040081D025 /* JCNavDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9181802AD040081D025 /* JCNavDeckController.m */; };
+		88E0D91C1802AD700081D025 /* JCNavDeckItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D91B1802AD700081D025 /* JCNavDeckItem.m */; };
+		88E0D9321802AE7A0081D025 /* UIViewController+JCNavDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9311802AE7A0081D025 /* UIViewController+JCNavDeckController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +32,15 @@
 		88E0D8EF1802AB820081D025 /* JCNavDeckDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JCNavDeckDemo-Prefix.pch"; sourceTree = "<group>"; };
 		88E0D8F01802AB820081D025 /* JCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JCAppDelegate.h; sourceTree = "<group>"; };
 		88E0D8F11802AB820081D025 /* JCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JCAppDelegate.m; sourceTree = "<group>"; };
-		88E0D9101802ABCE0081D025 /* JCNavDeck.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = JCNavDeck.storyboard; path = ../JCNavDeck/JCNavDeck.storyboard; sourceTree = "<group>"; };
+		88E0D9101802ABCE0081D025 /* JCNavDeck.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = JCNavDeck.storyboard; sourceTree = "<group>"; };
 		88E0D9131802AC210081D025 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		88E0D9141802AC210081D025 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		88E0D9171802AD040081D025 /* JCNavDeckController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCNavDeckController.h; sourceTree = "<group>"; };
+		88E0D9181802AD040081D025 /* JCNavDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNavDeckController.m; sourceTree = "<group>"; };
+		88E0D91A1802AD700081D025 /* JCNavDeckItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCNavDeckItem.h; sourceTree = "<group>"; };
+		88E0D91B1802AD700081D025 /* JCNavDeckItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNavDeckItem.m; sourceTree = "<group>"; };
+		88E0D9311802AE7A0081D025 /* UIViewController+JCNavDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JCNavDeckController.m"; sourceTree = "<group>"; };
+		88E0D9331802B0280081D025 /* UIViewController+JCNavDeckController(Private).h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JCNavDeckController(Private).h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +112,15 @@
 			isa = PBXGroup;
 			children = (
 				88E0D9101802ABCE0081D025 /* JCNavDeck.storyboard */,
+				88E0D9171802AD040081D025 /* JCNavDeckController.h */,
+				88E0D9181802AD040081D025 /* JCNavDeckController.m */,
+				88E0D9331802B0280081D025 /* UIViewController+JCNavDeckController(Private).h */,
+				88E0D9311802AE7A0081D025 /* UIViewController+JCNavDeckController.m */,
+				88E0D91A1802AD700081D025 /* JCNavDeckItem.h */,
+				88E0D91B1802AD700081D025 /* JCNavDeckItem.m */,
 			);
 			name = JCNavDeck;
+			path = ../JCNavDeck;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +191,9 @@
 			files = (
 				88E0D8EE1802AB820081D025 /* main.m in Sources */,
 				88E0D8F21802AB820081D025 /* JCAppDelegate.m in Sources */,
+				88E0D91C1802AD700081D025 /* JCNavDeckItem.m in Sources */,
+				88E0D9321802AE7A0081D025 /* UIViewController+JCNavDeckController.m in Sources */,
+				88E0D9191802AD040081D025 /* JCNavDeckController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +324,7 @@
 				88E0D90C1802AB820081D025 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

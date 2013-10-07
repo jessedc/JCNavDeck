@@ -6,10 +6,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Nav Deck Controller-->
         <scene sceneID="gUB-ps-As0">
             <objects>
-                <viewController id="6Wb-2J-Xoc" sceneMemberID="viewController">
+                <viewController id="6Wb-2J-Xoc" customClass="JCNavDeckController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pw2-rz-sRy">
                         <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
