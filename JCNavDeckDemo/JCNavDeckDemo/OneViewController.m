@@ -7,6 +7,7 @@
 //
 
 #import "OneViewController.h"
+#import "JCNavDeckController.h"
 
 @interface OneViewController ()
 
@@ -27,6 +28,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    //FIXME: JC - this is a bit of a hack to get started
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Nav" style:UIBarButtonItemStyleBordered target:self.navDeckController action:@selector(toggle)];
 
     self.view.backgroundColor = [UIColor redColor];
 }

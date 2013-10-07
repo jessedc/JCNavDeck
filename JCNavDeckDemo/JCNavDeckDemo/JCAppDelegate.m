@@ -10,6 +10,7 @@
 #import "JCNavDeckController.h"
 
 #import "OneViewController.h"
+#import "TwoViewController.h"
 
 @implementation JCAppDelegate
 
@@ -20,7 +21,11 @@
     OneViewController *vc1 = [[OneViewController alloc] initWithNibName:nil bundle:nil];
     UINavigationController *navController1 = [[UINavigationController alloc] initWithRootViewController:vc1];
 
-    navDeckController.viewControllers = @[navController1];
+    TwoViewController *vc2 = [[TwoViewController alloc] initWithNibName:nil bundle:nil];
+    UINavigationController *navController2 = [[UINavigationController alloc] initWithRootViewController:vc2];
+
+
+    navDeckController.viewControllers = @[navController1, navController2];
 
     return YES;
 }

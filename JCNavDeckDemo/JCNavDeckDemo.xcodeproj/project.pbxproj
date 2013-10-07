@@ -22,6 +22,9 @@
 		88E0D9361802B30D0081D025 /* JCNavDeckMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9351802B30D0081D025 /* JCNavDeckMenuViewController.m */; };
 		88E0D9391802B93E0081D025 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9381802B93E0081D025 /* OneViewController.m */; };
 		88E0D93C1802BFD70081D025 /* JCNavDeckContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D93B1802BFD70081D025 /* JCNavDeckContainerViewController.m */; };
+		88E0D9401802C5220081D025 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E0D93F1802C5220081D025 /* CFNetwork.framework */; };
+		88E0D9421802C5280081D025 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88E0D9411802C5280081D025 /* QuartzCore.framework */; };
+		88E0D9451802CB2B0081D025 /* TwoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9441802CB2B0081D025 /* TwoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,10 @@
 		88E0D9381802B93E0081D025 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 		88E0D93A1802BFD70081D025 /* JCNavDeckContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCNavDeckContainerViewController.h; sourceTree = "<group>"; };
 		88E0D93B1802BFD70081D025 /* JCNavDeckContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNavDeckContainerViewController.m; sourceTree = "<group>"; };
+		88E0D93F1802C5220081D025 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		88E0D9411802C5280081D025 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		88E0D9431802CB2B0081D025 /* TwoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwoViewController.h; sourceTree = "<group>"; };
+		88E0D9441802CB2B0081D025 /* TwoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E0D9421802C5280081D025 /* QuartzCore.framework in Frameworks */,
+				88E0D9401802C5220081D025 /* CFNetwork.framework in Frameworks */,
 				88E0D8E41802AB820081D025 /* CoreGraphics.framework in Frameworks */,
 				88E0D8E61802AB820081D025 /* UIKit.framework in Frameworks */,
 				88E0D8E21802AB820081D025 /* Foundation.framework in Frameworks */,
@@ -89,6 +98,8 @@
 		88E0D8E01802AB820081D025 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88E0D9411802C5280081D025 /* QuartzCore.framework */,
+				88E0D93F1802C5220081D025 /* CFNetwork.framework */,
 				88E0D8E11802AB820081D025 /* Foundation.framework */,
 				88E0D8E31802AB820081D025 /* CoreGraphics.framework */,
 				88E0D8E51802AB820081D025 /* UIKit.framework */,
@@ -104,6 +115,8 @@
 				88E0D9371802B93E0081D025 /* OneViewController.h */,
 				88E0D9381802B93E0081D025 /* OneViewController.m */,
 				88E0D8E81802AB820081D025 /* Supporting Files */,
+				88E0D9431802CB2B0081D025 /* TwoViewController.h */,
+				88E0D9441802CB2B0081D025 /* TwoViewController.m */,
 			);
 			path = JCNavDeckDemo;
 			sourceTree = "<group>";
@@ -210,6 +223,7 @@
 				88E0D8F21802AB820081D025 /* JCAppDelegate.m in Sources */,
 				88E0D91C1802AD700081D025 /* JCNavDeckItem.m in Sources */,
 				88E0D9321802AE7A0081D025 /* UIViewController+JCNavDeckController.m in Sources */,
+				88E0D9451802CB2B0081D025 /* TwoViewController.m in Sources */,
 				88E0D9391802B93E0081D025 /* OneViewController.m in Sources */,
 				88E0D9191802AD040081D025 /* JCNavDeckController.m in Sources */,
 			);
@@ -304,9 +318,14 @@
 		88E0D90B1802AB820081D025 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jesse/Xcode/JCNavDeck/JCNavDeckDemo,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCNavDeckDemo/JCNavDeckDemo-Prefix.pch";
 				INFOPLIST_FILE = "JCNavDeckDemo/JCNavDeckDemo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -315,9 +334,14 @@
 		88E0D90C1802AB820081D025 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/jesse/Xcode/JCNavDeck/JCNavDeckDemo,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "JCNavDeckDemo/JCNavDeckDemo-Prefix.pch";
 				INFOPLIST_FILE = "JCNavDeckDemo/JCNavDeckDemo-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
