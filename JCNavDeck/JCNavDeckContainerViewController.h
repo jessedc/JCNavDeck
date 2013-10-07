@@ -12,4 +12,6 @@
 
 @property (nonatomic, strong) UIViewController *rootViewController;
 
+@property (nonatomic, assign) BOOL tapCaptureEnabled;
+
 @end

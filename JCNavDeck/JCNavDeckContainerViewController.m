@@ -7,9 +7,11 @@
 //
 
 #import "JCNavDeckContainerViewController.h"
+#import "JCNavDeckController.h"
 #import "UIViewController+JCNavDeckController(Private).h"
 
 @interface JCNavDeckContainerViewController ()
+@property (nonatomic, strong) UIView *coverView;
 @end
 
 @implementation JCNavDeckContainerViewController
@@ -43,7 +45,9 @@
         [self.view addSubview:_rootViewController.view];
         [_rootViewController didMoveToParentViewController:self];
 
-//        [self updateViewConstraints]; //FIXME: JC - is this required
+        [self.view bringSubviewToFront:self.coverView];
+
+        [self updateViewConstraints];
     }
 }
 
@@ -57,6 +61,37 @@
     NSDictionary *views = NSDictionaryOfVariableBindings(rootvc);
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[rootvc]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[rootvc]|" options:0 metrics:nil views:views]];
+}
+
+- (void)setTapCaptureEnabled:(BOOL)tapCaptureEnabled
+{
+    _tapCaptureEnabled = tapCaptureEnabled;
+
+    if (tapCaptureEnabled)
+    {
+	if (self.coverView == nil)
+	{
+	    self.coverView = [[UIView alloc] initWithFrame:CGRectZero];
+            self.coverView.translatesAutoresizingMaskIntoConstraints = NO;
+
+	    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(topViewControllerContainerTapGestureRecognised:)];
+	    [self.coverView addGestureRecognizer:tapGestureRecognizer];
+	}
+	[self.view addSubview:self.coverView];
+
+        NSDictionary *views = NSDictionaryOfVariableBindings(_coverView);
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_coverView]|" options:0 metrics:nil views:views]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"|[_coverView]|" options:0 metrics:nil views:views]];
+    }
+    else
+    {
+	[self.coverView removeFromSuperview];
+    }
+}
+
+- (void)topViewControllerContainerTapGestureRecognised:(UITapGestureRecognizer *)gestureRecognizer
+{
+    [self.navDeckController toggle];
 }
 
 @end

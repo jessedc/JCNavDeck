@@ -14,6 +14,10 @@
 @property (nonatomic, weak, readonly) UIViewController *selectedViewController; //weak pointer to the selected controller, unlike tab bar controller it can't be set (yet)
 @property (nonatomic, assign) NSUInteger selectedIndex;
 
+- (void)open;
+- (void)close;
+- (void)toggle;
+
 @end
 
 @interface UIViewController (JCNavDeckViewControllerItem)
