@@ -19,6 +19,8 @@
 		88E0D9191802AD040081D025 /* JCNavDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9181802AD040081D025 /* JCNavDeckController.m */; };
 		88E0D91C1802AD700081D025 /* JCNavDeckItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D91B1802AD700081D025 /* JCNavDeckItem.m */; };
 		88E0D9321802AE7A0081D025 /* UIViewController+JCNavDeckController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9311802AE7A0081D025 /* UIViewController+JCNavDeckController.m */; };
+		88E0D9361802B30D0081D025 /* JCNavDeckMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9351802B30D0081D025 /* JCNavDeckMenuViewController.m */; };
+		88E0D9391802B93E0081D025 /* OneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88E0D9381802B93E0081D025 /* OneViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		88E0D91B1802AD700081D025 /* JCNavDeckItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNavDeckItem.m; sourceTree = "<group>"; };
 		88E0D9311802AE7A0081D025 /* UIViewController+JCNavDeckController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+JCNavDeckController.m"; sourceTree = "<group>"; };
 		88E0D9331802B0280081D025 /* UIViewController+JCNavDeckController(Private).h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+JCNavDeckController(Private).h"; sourceTree = "<group>"; };
+		88E0D9341802B30D0081D025 /* JCNavDeckMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCNavDeckMenuViewController.h; sourceTree = "<group>"; };
+		88E0D9351802B30D0081D025 /* JCNavDeckMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCNavDeckMenuViewController.m; sourceTree = "<group>"; };
+		88E0D9371802B93E0081D025 /* OneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewController.h; sourceTree = "<group>"; };
+		88E0D9381802B93E0081D025 /* OneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 			children = (
 				88E0D8F01802AB820081D025 /* JCAppDelegate.h */,
 				88E0D8F11802AB820081D025 /* JCAppDelegate.m */,
+				88E0D9371802B93E0081D025 /* OneViewController.h */,
+				88E0D9381802B93E0081D025 /* OneViewController.m */,
 				88E0D8E81802AB820081D025 /* Supporting Files */,
 			);
 			path = JCNavDeckDemo;
@@ -114,6 +122,8 @@
 				88E0D9101802ABCE0081D025 /* JCNavDeck.storyboard */,
 				88E0D9171802AD040081D025 /* JCNavDeckController.h */,
 				88E0D9181802AD040081D025 /* JCNavDeckController.m */,
+				88E0D9341802B30D0081D025 /* JCNavDeckMenuViewController.h */,
+				88E0D9351802B30D0081D025 /* JCNavDeckMenuViewController.m */,
 				88E0D9331802B0280081D025 /* UIViewController+JCNavDeckController(Private).h */,
 				88E0D9311802AE7A0081D025 /* UIViewController+JCNavDeckController.m */,
 				88E0D91A1802AD700081D025 /* JCNavDeckItem.h */,
@@ -190,9 +200,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				88E0D8EE1802AB820081D025 /* main.m in Sources */,
+				88E0D9361802B30D0081D025 /* JCNavDeckMenuViewController.m in Sources */,
 				88E0D8F21802AB820081D025 /* JCAppDelegate.m in Sources */,
 				88E0D91C1802AD700081D025 /* JCNavDeckItem.m in Sources */,
 				88E0D9321802AE7A0081D025 /* UIViewController+JCNavDeckController.m in Sources */,
+				88E0D9391802B93E0081D025 /* OneViewController.m in Sources */,
 				88E0D9191802AD040081D025 /* JCNavDeckController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
